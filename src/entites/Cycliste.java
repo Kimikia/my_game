@@ -115,8 +115,8 @@ public abstract class Cycliste implements Comparable<Cycliste> {
      */
     public void avancer(List<Cycliste> cyclisteList, Circuit circuit) {
         int nouvellePositionTuile = calculerNouvellePositionParRapportaLaTuile(circuit);
-        int nouvellePositionCycliste = calculerNouvellePositionParRapportAuCyclistes(nouvellePositionTuile, cyclisteList);
-        this.positionActuelle = nouvellePositionCycliste;
+        int nouvellePositionCyclistee = calculerNouvellePositionParRapportAuCyclistes(nouvellePositionTuile, cyclisteList);
+        this.positionActuelle = nouvellePositionCyclistee;
     }
 
     public void appliquerFatigue(CarteFatigue carteFatigue) {
