@@ -66,7 +66,7 @@ public class Jeu {
     }
 
     private void appliquerFatigue() {
-        System.out.println("==> appliquer fatigue sur le cycliste en tete");
+        System.out.println("==> appliquer fatigue sur le cycliste en tete  ");
 
         Cycliste cycliste = retourneJoueurEnTete();
 
@@ -84,7 +84,7 @@ public class Jeu {
     }
 
     private void appliquerAspiration() {
-        System.out.println("==> appliquer aspiration");
+
 
         List<Cycliste> listeCyclistesTrier = listeCyclisteTrierParPosition();
         //parcours tableau jusqu'a l'avant dernier element
@@ -93,8 +93,10 @@ public class Jeu {
             int pos2 = listeCyclistesTrier.get(i + 1).getPositionActuelle();
             if (pos2 - pos1 == 2) {
                 listeCyclistesTrier.get(i).appliquerAspiration();
+                System.out.println("==> appliquer aspiration");
             }
         }
+
     }
 
     private void avancerJoueurs() {

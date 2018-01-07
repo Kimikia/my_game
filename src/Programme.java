@@ -14,26 +14,26 @@ public class Programme {
 
         //creer 4 joueurs et les mettre dans une liste
 
-        System.out.println("Hello Les Cyclistes ! Préts pour une nouvelle course ??!!  Allez C'est partie!!! ");
+        System.out.println("Hello Les Cyclistes =) ! Préts pour une nouvelle course ??!!  Allez C'est partie!!! ");
         System.out.println("Commencer par : ");
         System.out.println("Entrer le nombre de joueurs (entre 2 et 4)");
         List <Joueur> joueurList = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         int nbJoueur = sc.nextInt();
         while (nbJoueur<2 ||nbJoueur>4){
-            System.out.println("Oups! , le nombre de joueur est entre 2 et 4 , veuillez resaisir !");
+            System.out.println("Oups! , le nombre de joueur doit étre entre 2 et 4 , veuillez resaisir !");
             nbJoueur = sc.nextInt();
 
         }
 
         if (nbJoueur==2){
             System.out.println("Entrer le nom du joueur1");
-            String nomJoueur = sc.next();
-            Joueur joueur1 = new Joueur(nomJoueur,Constants.EQUIPE_1);
+            String nomJoueur1 = sc.next();
+            Joueur joueur1 = new Joueur(nomJoueur1,Constants.EQUIPE_1);
 
             System.out.println("Entrer le nom du joueur2");
             String nomJoueur2 = sc.next();
-            Joueur joueur2 = new Joueur(nomJoueur,Constants.EQUIPE_2);
+            Joueur joueur2 = new Joueur(nomJoueur2,Constants.EQUIPE_2);
 
             joueurList.add(joueur1);
             joueurList.add(joueur2);
@@ -41,16 +41,16 @@ public class Programme {
         }
         else if (nbJoueur==3){
             System.out.println("Entrer le nom du joueur1");
-            String nomJoueur = sc.next();
-            Joueur joueur1 = new Joueur(nomJoueur,Constants.EQUIPE_1);
+            String nomJoueur1 = sc.next();
+            Joueur joueur1 = new Joueur(nomJoueur1,Constants.EQUIPE_1);
 
             System.out.println("Entrer le nom du joueur2");
             String nomJoueur2 = sc.next();
-            Joueur joueur2 = new Joueur(nomJoueur,Constants.EQUIPE_2);
+            Joueur joueur2 = new Joueur(nomJoueur2,Constants.EQUIPE_2);
 
             System.out.println("Entrer le nom du joueur3");
             String nomJoueur3 = sc.next();
-            Joueur joueur3 = new Joueur(nomJoueur,Constants.EQUIPE_3);
+            Joueur joueur3 = new Joueur(nomJoueur3,Constants.EQUIPE_3);
 
 
             joueurList.add(joueur1);
@@ -59,20 +59,20 @@ public class Programme {
         }
         else {
             System.out.println("Entrer le nom du joueur1");
-            String nomJoueur = sc.next();
-            Joueur joueur1 = new Joueur(nomJoueur,Constants.EQUIPE_1);
+            String nomJoueur1 = sc.next();
+            Joueur joueur1 = new Joueur(nomJoueur1,Constants.EQUIPE_1);
 
             System.out.println("Entrer le nom du joueur2");
             String nomJoueur2 = sc.next();
-            Joueur joueur2 = new Joueur(nomJoueur,Constants.EQUIPE_2);
+            Joueur joueur2 = new Joueur(nomJoueur2,Constants.EQUIPE_2);
 
             System.out.println("Entrer le nom du joueur3");
             String nomJoueur3 = sc.next();
-            Joueur joueur3 = new Joueur(nomJoueur,Constants.EQUIPE_3);
+            Joueur joueur3 = new Joueur(nomJoueur3,Constants.EQUIPE_3);
 
             System.out.println("Entrer le nom du joueur4");
             String nomJoueur4 = sc.next();
-            Joueur joueur4 = new Joueur(nomJoueur,Constants.EQUIPE_4);
+            Joueur joueur4 = new Joueur(nomJoueur4,Constants.EQUIPE_4);
 
             joueurList.add(joueur1);
             joueurList.add(joueur2);
