@@ -17,6 +17,11 @@ public class Utilitaires {
     3 cartes '7'
 
     */
+
+    /**
+     * creation de paquet de carte pour le rouleur
+     * @return liste paquet de carte
+     */
     public static List<Carte> creerPaquetsRouleur() {
 
 
@@ -43,6 +48,10 @@ public class Utilitaires {
         return carteList;
     }
 
+    /**
+     * creation de paquet de carte pour le Sprinteur
+     * @return liste paquet de carte
+     */
     public static List<Carte> creerPaquetSprinter() {
     /*
     Le paquet de carte du Sprinteur est constitué de :
@@ -76,6 +85,11 @@ public class Utilitaires {
         return carteList;
     }
 
+
+    /**
+     * creation de paquet de carte fatigue
+     * @return liste paquet de carte
+     */
     public static List<CarteFatigue> creerPaquetFatigues() {
         // le paquet de fatigue est constitué de 30 cartes Fatigue
 
@@ -116,6 +130,12 @@ public class Utilitaires {
         return carteList;
     }
 
+    //on va creer 3 circuits , le joueur devrait choisr le circuit qu'il veut selon le degrée de difficulté
+
+    /**
+     * creation de circuit
+     * @return circuit
+     */
     public static Circuit creerCircuitFacile() {
 
         List<Tuile> list = new ArrayList<>();
@@ -147,5 +167,62 @@ public class Utilitaires {
 
     }
 
+    /**
+     * creation de circuit niveau moyen
+     * @returncircuit moyen
+     */
+    public static Circuit creerCircuitMoyen(){
+        List<Tuile> list = new ArrayList<>();
+        list.add(TuilesDefinies.depart);
+        list.add(TuilesDefinies.d);
+        list.add(TuilesDefinies.e);
+        list.add(TuilesDefinies.m);
+        list.add(TuilesDefinies.o);
+        list.add(TuilesDefinies.q);
+        list.add(TuilesDefinies.g);
+        list.add(TuilesDefinies.h);
+        list.add(TuilesDefinies.c);
+        list.add(TuilesDefinies.j);
+        list.add(TuilesDefinies.k);
+        list.add(TuilesDefinies.l);
+        list.add(TuilesDefinies.b);
+        list.add(TuilesDefinies.i);
+        list.add(TuilesDefinies.r);
+        list.add(TuilesDefinies.p);
+        list.add(TuilesDefinies.f);
+        list.add(TuilesDefinies.n);
+        list.add(TuilesDefinies.s);
+        list.add(TuilesDefinies.t);
+        list.add(TuilesDefinies.arrive);
+        Circuit circuit = new Circuit(list, "Circuit Moyen");
+        return circuit;
+    }
+
+    public static Circuit creerCircuitHard(){
+        List<Tuile> list = new ArrayList<>();
+        list.add(TuilesDefinies.depart);
+        list.add(TuilesDefinies.b);
+        list.add(TuilesDefinies.r);
+        list.add(TuilesDefinies.s);
+        list.add(TuilesDefinies.e);
+        list.add(TuilesDefinies.q);
+        list.add(TuilesDefinies.i);
+        list.add(TuilesDefinies.h);
+        list.add(TuilesDefinies.d);
+        list.add(TuilesDefinies.j);
+        list.add(TuilesDefinies.k);
+        list.add(TuilesDefinies.o);
+        list.add(TuilesDefinies.c);
+        list.add(TuilesDefinies.g);
+        list.add(TuilesDefinies.l);
+        list.add(TuilesDefinies.p);
+        list.add(TuilesDefinies.f);
+        list.add(TuilesDefinies.n);
+        list.add(TuilesDefinies.m);
+        list.add(TuilesDefinies.t);
+        list.add(TuilesDefinies.arrive);
+        Circuit circuit = new Circuit(list, "Circuit Hard");
+        return circuit;
+    }
 
 }
