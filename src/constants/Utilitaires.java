@@ -136,7 +136,7 @@ public class Utilitaires {
      * creation de circuit
      * @return circuit
      */
-    public static Circuit creerCircuitFacile() {
+    private static Circuit creerCircuitFacile() {
 
         List<Tuile> list = new ArrayList<>();
         list.add(TuilesDefinies.depart);
@@ -162,16 +162,16 @@ public class Utilitaires {
         list.add(TuilesDefinies.arrive);
 
 
-        Circuit circuit = new Circuit(list, "Circuit Facile");
-        return circuit;
+
+        return new Circuit(list, "Circuit Facile");
 
     }
 
     /**
      * creation de circuit niveau moyen
-     * @returncircuit moyen
+     * @return circuit moyen
      */
-    public static Circuit creerCircuitMoyen(){
+    private static Circuit creerCircuitMoyen(){
         List<Tuile> list = new ArrayList<>();
         list.add(TuilesDefinies.depart);
         list.add(TuilesDefinies.d);
@@ -194,11 +194,11 @@ public class Utilitaires {
         list.add(TuilesDefinies.s);
         list.add(TuilesDefinies.t);
         list.add(TuilesDefinies.arrive);
-        Circuit circuit = new Circuit(list, "Circuit Moyen");
-        return circuit;
+        return new Circuit(list, "Circuit Moyen");
+
     }
 
-    public static Circuit creerCircuitHard(){
+    private static Circuit creerCircuitDifficile(){
         List<Tuile> list = new ArrayList<>();
         list.add(TuilesDefinies.depart);
         list.add(TuilesDefinies.b);
@@ -221,8 +221,25 @@ public class Utilitaires {
         list.add(TuilesDefinies.m);
         list.add(TuilesDefinies.t);
         list.add(TuilesDefinies.arrive);
-        Circuit circuit = new Circuit(list, "Circuit Hard");
-        return circuit;
-    }
+        return new Circuit(list, "Circuit Difficile");
 
-}
+    }
+    public static Circuit circuitChoisis (int niveau){
+        List<Tuile> list = new ArrayList<>();
+        Circuit circuit= new Circuit(list , "nom Circuit") ;
+        if ( niveau==1){
+           circuit=creerCircuitFacile();
+        }
+        else if ( niveau==2){
+          circuit=  creerCircuitMoyen();
+        }
+
+        else if ( niveau==3){
+         circuit = creerCircuitDifficile();
+
+        }
+
+        return circuit;
+
+    }
+    }
