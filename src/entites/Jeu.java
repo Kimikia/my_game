@@ -27,7 +27,14 @@ public class Jeu {
         this.phaseDeJeu = Constants.PHASE_D_ENERGIE;
     }
 
+    public void positionDepart (){
+        for (int i =0 ; i<listeJoueur.size();i++){
+            listeJoueur.get(i).getRouleur().setPositionActuelle(i+1);
+            listeJoueur.get(i).getSprinter().setPositionActuelle(i+2);
+    }
+    }
     public void demarrerJeu() {
+        positionDepart();
         debutPhaseEnergie();
     }
 
@@ -134,7 +141,7 @@ public class Jeu {
     }
 
     private void debutPhaseEnergie() {
-        System.out.println("============================ Debut Phase Energie ============================");
+        System.out.println("============================ Phase Energie ============================");
         // changer la phase actuelle
         phaseDeJeu = Constants.PHASE_D_ENERGIE;
 
@@ -146,7 +153,7 @@ public class Jeu {
     }
 
     private void debutPhaseMouvement() {
-        System.out.println("============================ Debut Phase Mouvement ============================");
+        System.out.println("============================ Phase Mouvement ============================");
         // changer la phase actuelle
         phaseDeJeu = Constants.PHASE_DE_MOUVEMENT;
 
@@ -158,7 +165,7 @@ public class Jeu {
     }
 
     private void debutPhaseFinale() {
-        System.out.println("============================ Debut Phase Finale ============================");
+        System.out.println("============================  Phase Finale ============================");
         //checker si le jeu est fini >> afficher jeu fini
         if (estFini()) {
             System.out.println("La partie est terminé");
@@ -196,6 +203,7 @@ public class Jeu {
             System.out.println("La position du Rouleur du joueur " + joueur.getNomJoueur() + " est " + joueur.getRouleur().getPositionActuelle());
         }
     }
+
 
     /*
     METHODES Getters

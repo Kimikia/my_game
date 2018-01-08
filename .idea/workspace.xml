@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd2a4861-d149-4620-9ebb-c99629f04b18" name="Default" comment="indice des joueurs n'était pas le bon">
+    <list default="true" id="fd2a4861-d149-4620-9ebb-c99629f04b18" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FlammeRouge/Programme.class" afterPath="$PROJECT_DIR$/out/production/FlammeRouge/Programme.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FlammeRouge/entites/Jeu.class" afterPath="$PROJECT_DIR$/out/production/FlammeRouge/entites/Jeu.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Programme.java" afterPath="$PROJECT_DIR$/src/Programme.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/entites/Jeu.java" afterPath="$PROJECT_DIR$/src/entites/Jeu.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,29 +20,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Circuit.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entites/Circuit.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-533">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding>
-                <element signature="method#positionDerniereCase#0;class#Circuit#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Cycliste.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/entites/Cycliste.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+            <state relative-caret-position="607">
+              <caret line="119" column="5" lean-forward="true" selection-start-line="119" selection-start-column="5" selection-end-line="119" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#setListeCartesFaceCache#0;class#Cycliste#0" expanded="false" />
                 <element signature="method#setListeCartesDefaucees#0;class#Cycliste#0" expanded="false" />
                 <element signature="docComment;method#piocher4Cartes#0;class#Cycliste#0" expanded="false" />
                 <element signature="method#piocher4Cartes#0;class#Cycliste#0" expanded="false" />
+                <element signature="method#choisirCarte#0;class#Cycliste#0" expanded="false" />
+                <element signature="docComment;method#avancer#0;class#Cycliste#0" expanded="false" />
                 <element signature="method#appliquerFatigue#0;class#Cycliste#0" expanded="false" />
                 <element signature="method#appliquerAspiration#0;class#Cycliste#0" expanded="false" />
                 <element signature="method#melangerLaDefauce#0;class#Cycliste#0" expanded="false" />
@@ -57,22 +48,19 @@
       <file leaf-file-name="Rouleur.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/entites/Rouleur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CarteEnergie.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entites/CarteEnergie.java">
+      <file leaf-file-name="Sprinter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entites/Sprinter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-              <folding>
-                <element signature="e#97#98#0" expanded="true" />
-                <element signature="e#126#127#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,9 +68,13 @@
       <file leaf-file-name="Joueur.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/entites/Joueur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="44" column="24" lean-forward="false" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
-              <folding />
+            <state relative-caret-position="309">
+              <caret line="50" column="16" lean-forward="false" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+              <folding>
+                <element signature="method#Joueur#0;class#Joueur#0" expanded="false" />
+                <element signature="method#piocher#0;class#Joueur#0" expanded="false" />
+                <element signature="method#avancer#0;class#Joueur#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -100,7 +92,7 @@
       <file leaf-file-name="Utilitaires.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/constants/Utilitaires.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="-898">
               <caret line="171" column="28" lean-forward="true" selection-start-line="171" selection-start-column="28" selection-end-line="171" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -122,14 +114,22 @@
       <file leaf-file-name="Jeu.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/entites/Jeu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="192" column="8" lean-forward="false" selection-start-line="192" selection-start-column="8" selection-end-line="192" selection-end-column="8" />
+            <state relative-caret-position="73">
+              <caret line="32" column="68" lean-forward="false" selection-start-line="32" selection-start-column="68" selection-end-line="32" selection-end-column="68" />
               <folding>
+                <element signature="method#Jeu#0;class#Jeu#0" expanded="false" />
+                <element signature="method#estFini#0;class#Jeu#0" expanded="false" />
+                <element signature="method#listeCyclisteTrierParPosition#0;class#Jeu#0" expanded="false" />
+                <element signature="method#retourneJoueurEnTete#0;class#Jeu#0" expanded="false" />
+                <element signature="method#appliquerFatigue#0;class#Jeu#0" expanded="false" />
+                <element signature="method#appliquerAspiration#0;class#Jeu#0" expanded="false" />
                 <element signature="method#avancerJoueurs#0;class#Jeu#0" expanded="false" />
                 <element signature="method#piocherCartes#0;class#Jeu#0" expanded="false" />
                 <element signature="method#passerPhaseSuivante#0;class#Jeu#0" expanded="false" />
+                <element signature="method#debutPhaseEnergie#0;class#Jeu#0" expanded="false" />
                 <element signature="method#debutPhaseMouvement#0;class#Jeu#0" expanded="false" />
                 <element signature="method#debutPhaseFinale#0;class#Jeu#0" expanded="false" />
+                <element signature="method#afficherPositionCyclistes#0;class#Jeu#0" expanded="false" />
                 <element signature="method#setPaquetFatigueSprinteur#0;class#Jeu#0" expanded="false" />
                 <element signature="method#setPaquetFatigueRouleur#0;class#Jeu#0" expanded="false" />
               </folding>
@@ -140,7 +140,7 @@
       <file leaf-file-name="Programme.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Programme.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="493">
               <caret line="38" column="36" lean-forward="true" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -216,7 +216,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="676" />
+    <option name="x" value="843" />
+    <option name="y" value="2" />
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
@@ -434,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1515350707887</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="indice des joueurs n'était pas le bon">
+      <created>1515358407301</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1515358407301</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -451,13 +459,13 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4893617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24713585" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24713585" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11620294" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.63829786" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -492,7 +500,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/entites/Jeu.java</url>
-          <line>47</line>
+          <line>54</line>
           <properties class="entites.Jeu" method="listeCyclisteTrierParPosition">
             <option name="EMULATED" value="true" />
           </properties>
@@ -500,11 +508,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/entites/Jeu.java</url>
-          <line>147</line>
+          <line>154</line>
           <properties class="entites.Jeu" method="debutPhaseMouvement">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/entites/Joueur.java</url>
+          <line>50</line>
+          <properties class="entites.Joueur" method="avancer">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/entites/Jeu.java</url>
@@ -513,7 +529,7 @@
           <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="13" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -564,7 +580,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="50" column="23" lean-forward="false" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
-          <folding />
+          <folding>
+            <element signature="method#Joueur#0;class#Joueur#0" expanded="false" />
+            <element signature="method#piocher#0;class#Joueur#0" expanded="false" />
+            <element signature="method#avancer#0;class#Joueur#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -591,11 +611,19 @@
         <state relative-caret-position="4029">
           <caret line="237" column="5" lean-forward="true" selection-start-line="237" selection-start-column="5" selection-end-line="237" selection-end-column="5" />
           <folding>
+            <element signature="method#Jeu#0;class#Jeu#0" expanded="false" />
+            <element signature="method#estFini#0;class#Jeu#0" expanded="false" />
+            <element signature="method#listeCyclisteTrierParPosition#0;class#Jeu#0" expanded="false" />
+            <element signature="method#retourneJoueurEnTete#0;class#Jeu#0" expanded="false" />
+            <element signature="method#appliquerFatigue#0;class#Jeu#0" expanded="false" />
+            <element signature="method#appliquerAspiration#0;class#Jeu#0" expanded="false" />
             <element signature="method#avancerJoueurs#0;class#Jeu#0" expanded="false" />
             <element signature="method#piocherCartes#0;class#Jeu#0" expanded="false" />
             <element signature="method#passerPhaseSuivante#0;class#Jeu#0" expanded="false" />
+            <element signature="method#debutPhaseEnergie#0;class#Jeu#0" expanded="false" />
             <element signature="method#debutPhaseMouvement#0;class#Jeu#0" expanded="false" />
             <element signature="method#debutPhaseFinale#0;class#Jeu#0" expanded="false" />
+            <element signature="method#afficherPositionCyclistes#0;class#Jeu#0" expanded="false" />
             <element signature="method#setPaquetFatigueSprinteur#0;class#Jeu#0" expanded="false" />
             <element signature="method#setPaquetFatigueRouleur#0;class#Jeu#0" expanded="false" />
           </folding>
@@ -612,6 +640,8 @@
             <element signature="method#setListeCartesDefaucees#0;class#Cycliste#0" expanded="false" />
             <element signature="docComment;method#piocher4Cartes#0;class#Cycliste#0" expanded="false" />
             <element signature="method#piocher4Cartes#0;class#Cycliste#0" expanded="false" />
+            <element signature="method#choisirCarte#0;class#Cycliste#0" expanded="false" />
+            <element signature="docComment;method#avancer#0;class#Cycliste#0" expanded="false" />
             <element signature="method#appliquerFatigue#0;class#Cycliste#0" expanded="false" />
             <element signature="method#appliquerAspiration#0;class#Cycliste#0" expanded="false" />
             <element signature="method#melangerLaDefauce#0;class#Cycliste#0" expanded="false" />
@@ -648,7 +678,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="45" column="10" lean-forward="false" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="method#Joueur#0;class#Joueur#0" expanded="false" />
+            <element signature="method#piocher#0;class#Joueur#0" expanded="false" />
+            <element signature="method#avancer#0;class#Joueur#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -662,6 +696,8 @@
             <element signature="method#setListeCartesDefaucees#0;class#Cycliste#0" expanded="false" />
             <element signature="docComment;method#piocher4Cartes#0;class#Cycliste#0" expanded="false" />
             <element signature="method#piocher4Cartes#0;class#Cycliste#0" expanded="false" />
+            <element signature="method#choisirCarte#0;class#Cycliste#0" expanded="false" />
+            <element signature="docComment;method#avancer#0;class#Cycliste#0" expanded="false" />
             <element signature="method#appliquerFatigue#0;class#Cycliste#0" expanded="false" />
             <element signature="method#appliquerAspiration#0;class#Cycliste#0" expanded="false" />
             <element signature="method#melangerLaDefauce#0;class#Cycliste#0" expanded="false" />
@@ -714,11 +750,19 @@
         <state relative-caret-position="663">
           <caret line="99" column="22" lean-forward="false" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
           <folding>
+            <element signature="method#Jeu#0;class#Jeu#0" expanded="false" />
+            <element signature="method#estFini#0;class#Jeu#0" expanded="false" />
+            <element signature="method#listeCyclisteTrierParPosition#0;class#Jeu#0" expanded="false" />
+            <element signature="method#retourneJoueurEnTete#0;class#Jeu#0" expanded="false" />
+            <element signature="method#appliquerFatigue#0;class#Jeu#0" expanded="false" />
+            <element signature="method#appliquerAspiration#0;class#Jeu#0" expanded="false" />
             <element signature="method#avancerJoueurs#0;class#Jeu#0" expanded="false" />
             <element signature="method#piocherCartes#0;class#Jeu#0" expanded="false" />
             <element signature="method#passerPhaseSuivante#0;class#Jeu#0" expanded="false" />
+            <element signature="method#debutPhaseEnergie#0;class#Jeu#0" expanded="false" />
             <element signature="method#debutPhaseMouvement#0;class#Jeu#0" expanded="false" />
             <element signature="method#debutPhaseFinale#0;class#Jeu#0" expanded="false" />
+            <element signature="method#afficherPositionCyclistes#0;class#Jeu#0" expanded="false" />
             <element signature="method#setPaquetFatigueSprinteur#0;class#Jeu#0" expanded="false" />
             <element signature="method#setPaquetFatigueRouleur#0;class#Jeu#0" expanded="false" />
           </folding>
@@ -771,7 +815,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding />
+          <folding>
+            <element signature="method#Joueur#0;class#Joueur#0" expanded="false" />
+            <element signature="method#piocher#0;class#Joueur#0" expanded="false" />
+            <element signature="method#avancer#0;class#Joueur#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -796,8 +844,8 @@
         <state relative-caret-position="34">
           <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
           <folding>
-            <element signature="e#97#98#0" expanded="true" />
-            <element signature="e#126#127#0" expanded="true" />
+            <element signature="e#97#98#0" expanded="false" />
+            <element signature="e#126#127#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -822,6 +870,8 @@
             <element signature="method#setListeCartesDefaucees#0;class#Cycliste#0" expanded="false" />
             <element signature="docComment;method#piocher4Cartes#0;class#Cycliste#0" expanded="false" />
             <element signature="method#piocher4Cartes#0;class#Cycliste#0" expanded="false" />
+            <element signature="method#choisirCarte#0;class#Cycliste#0" expanded="false" />
+            <element signature="docComment;method#avancer#0;class#Cycliste#0" expanded="false" />
             <element signature="method#appliquerFatigue#0;class#Cycliste#0" expanded="false" />
             <element signature="method#appliquerAspiration#0;class#Cycliste#0" expanded="false" />
             <element signature="method#melangerLaDefauce#0;class#Cycliste#0" expanded="false" />
@@ -887,31 +937,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="428" column="0" lean-forward="false" selection-start-line="428" selection-start-column="0" selection-end-line="428" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/entites/Tuile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1003">
           <caret line="69" column="55" lean-forward="false" selection-start-line="69" selection-start-column="55" selection-end-line="69" selection-end-column="55" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entites/Sprinter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding>
-            <element signature="e#113#114#0" expanded="false" />
-            <element signature="e#169#170#0" expanded="false" />
-            <element signature="e#226#227#0" expanded="false" />
-            <element signature="e#259#260#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -928,7 +958,7 @@
         <state relative-caret-position="136">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#96#97#0" expanded="true" />
+            <element signature="e#96#97#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -938,8 +968,8 @@
         <state relative-caret-position="68">
           <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
           <folding>
-            <element signature="e#97#98#0" expanded="true" />
-            <element signature="e#126#127#0" expanded="true" />
+            <element signature="e#97#98#0" expanded="false" />
+            <element signature="e#126#127#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -956,19 +986,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/entites/Rouleur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constants/Utilitaires.java">
+    <entry file="file://$PROJECT_DIR$/src/entites/Sprinter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="171" column="28" lean-forward="true" selection-start-line="171" selection-start-column="28" selection-end-line="171" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -990,22 +1018,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/entites/Joueur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="44" column="24" lean-forward="false" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
-          <folding />
+        <state relative-caret-position="309">
+          <caret line="50" column="16" lean-forward="false" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+          <folding>
+            <element signature="method#Joueur#0;class#Joueur#0" expanded="false" />
+            <element signature="method#piocher#0;class#Joueur#0" expanded="false" />
+            <element signature="method#avancer#0;class#Joueur#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/entites/Cycliste.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+        <state relative-caret-position="607">
+          <caret line="119" column="5" lean-forward="true" selection-start-line="119" selection-start-column="5" selection-end-line="119" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#setListeCartesFaceCache#0;class#Cycliste#0" expanded="false" />
             <element signature="method#setListeCartesDefaucees#0;class#Cycliste#0" expanded="false" />
             <element signature="docComment;method#piocher4Cartes#0;class#Cycliste#0" expanded="false" />
             <element signature="method#piocher4Cartes#0;class#Cycliste#0" expanded="false" />
+            <element signature="method#choisirCarte#0;class#Cycliste#0" expanded="false" />
+            <element signature="docComment;method#avancer#0;class#Cycliste#0" expanded="false" />
             <element signature="method#appliquerFatigue#0;class#Cycliste#0" expanded="false" />
             <element signature="method#appliquerAspiration#0;class#Cycliste#0" expanded="false" />
             <element signature="method#melangerLaDefauce#0;class#Cycliste#0" expanded="false" />
@@ -1017,9 +1051,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/constants/Utilitaires.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-898">
+          <caret line="171" column="28" lean-forward="true" selection-start-line="171" selection-start-column="28" selection-end-line="171" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Programme.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="493">
           <caret line="38" column="36" lean-forward="true" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1027,16 +1071,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="652" column="0" lean-forward="false" selection-start-line="652" selection-start-column="0" selection-end-line="652" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/entites/Jeu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="192" column="8" lean-forward="false" selection-start-line="192" selection-start-column="8" selection-end-line="192" selection-end-column="8" />
+        <state relative-caret-position="73">
+          <caret line="32" column="68" lean-forward="false" selection-start-line="32" selection-start-column="68" selection-end-line="32" selection-end-column="68" />
           <folding>
+            <element signature="method#Jeu#0;class#Jeu#0" expanded="false" />
+            <element signature="method#estFini#0;class#Jeu#0" expanded="false" />
+            <element signature="method#listeCyclisteTrierParPosition#0;class#Jeu#0" expanded="false" />
+            <element signature="method#retourneJoueurEnTete#0;class#Jeu#0" expanded="false" />
+            <element signature="method#appliquerFatigue#0;class#Jeu#0" expanded="false" />
+            <element signature="method#appliquerAspiration#0;class#Jeu#0" expanded="false" />
             <element signature="method#avancerJoueurs#0;class#Jeu#0" expanded="false" />
             <element signature="method#piocherCartes#0;class#Jeu#0" expanded="false" />
             <element signature="method#passerPhaseSuivante#0;class#Jeu#0" expanded="false" />
+            <element signature="method#debutPhaseEnergie#0;class#Jeu#0" expanded="false" />
             <element signature="method#debutPhaseMouvement#0;class#Jeu#0" expanded="false" />
             <element signature="method#debutPhaseFinale#0;class#Jeu#0" expanded="false" />
+            <element signature="method#afficherPositionCyclistes#0;class#Jeu#0" expanded="false" />
             <element signature="method#setPaquetFatigueSprinteur#0;class#Jeu#0" expanded="false" />
             <element signature="method#setPaquetFatigueRouleur#0;class#Jeu#0" expanded="false" />
           </folding>
