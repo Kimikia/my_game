@@ -18,26 +18,30 @@ public abstract class Cycliste implements Comparable<Cycliste> {
         this.listeCartesDefaucees = new ArrayList<>();
     }
 
+    /**
+     *
+     * METHODES GETTERS
+     */
     public int getPositionActuelle() {
         return positionActuelle;
     }
-
-    public void setPositionActuelle(int positionActuelle) {
-        this.positionActuelle = positionActuelle;
-    }
-
     public List<Carte> getListeCartesFaceCache() {
         return listeCartesFaceCache;
     }
-
-    public void setListeCartesFaceCache(List<Carte> listeCartesFaceCache) {
-        this.listeCartesFaceCache = listeCartesFaceCache;
-    }
-
     public List<Carte> getListeCartesDefaucees() {
         return listeCartesDefaucees;
     }
 
+    /**
+     *
+     * methodes setters
+     */
+    public void setPositionActuelle(int positionActuelle) {
+        this.positionActuelle = positionActuelle;
+    }
+    public void setListeCartesFaceCache(List<Carte> listeCartesFaceCache) {
+        this.listeCartesFaceCache = listeCartesFaceCache;
+    }
     public void setListeCartesDefaucees(List<Carte> listeCartesDefaucees) {
         this.listeCartesDefaucees = listeCartesDefaucees;
     }
