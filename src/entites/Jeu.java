@@ -27,22 +27,21 @@ public class Jeu {
         this.phaseDeJeu = Constants.PHASE_D_ENERGIE;
     }
 
-   /**
-    public void positionDepart (){
-        for (int i =0 ; i<listeJoueur.size();i++){
-            listeJoueur.get(i).getRouleur().setPositionActuelle(i+1);
-            listeJoueur.get(i).getSprinter().setPositionActuelle(i+2);
-    }
-    }**/
 
     /**
      * demarrer le jeu
      */
     public void demarrerJeu() {
-
+        positionDepart ();
         debutPhaseEnergie();
     }
 
+    public void positionDepart (){
+        for (int i =0 ; i<listeJoueur.size();i++){
+            listeJoueur.get(i).getRouleur().setPositionActuelle(i+1);
+            listeJoueur.get(i).getSprinter().setPositionActuelle(listeJoueur.size()-i);
+        }
+        }
     /**
      * verifier si le jeu est fini ou pas
      * @return vrai so le jeu est fini
@@ -82,7 +81,7 @@ public class Jeu {
 
     /**
      * retourner le cycliste du joueur en tete
-     * @return
+     * @return cycliste en tete
      */
     private Cycliste retourneCyclisteEnTete() {
         List<Cycliste> listeCyclistesTrier = listeCyclisteTrierParPosition();
@@ -131,14 +130,16 @@ public class Jeu {
     }
 
     /**
-     * permet aux joueurs d'avancer
+     * avancer les cyclistes
      */
-    private void avancerJoueurs() {
+    private void avancerCyclistes() {
         System.out.println("==> avancerJoueurs");
         List<Cycliste> cyclisteList = listeCyclisteTrierParPosition();
-        for (int i = 0; i < listeJoueur.size(); i++) {
-            Joueur joueur = listeJoueur.get(i);
-            joueur.avancer(cyclisteList, circuit);
+        for (int i = listeCyclisteTrierParPosition().size(); i>0; i--) {
+            Cycliste cycliste = listeCyclisteTrierParPosition().get(i);
+            cycliste.avancer(cyclisteList,circuit);
+
+
         }
     }
 
@@ -197,7 +198,7 @@ public class Jeu {
         phaseDeJeu = Constants.PHASE_DE_MOUVEMENT;
 
         // appeler les methodes de cette phase
-        avancerJoueurs();
+        avancerCyclistes();
 
         //passer a la phase suivante
         passerPhaseSuivante();

@@ -125,6 +125,7 @@ public abstract class Cycliste implements Comparable<Cycliste> {
         this.positionActuelle = nouvellePositionCyclistee;
     }
 
+
     /**
      * ajouter une carte fatigue dans liste retournee
      * @param carteFatigue dont le numero est 2
@@ -157,11 +158,8 @@ public abstract class Cycliste implements Comparable<Cycliste> {
         Collections.shuffle(listeCartesFaceCache);
     }
 
-    /**
-     * compare la position des cyclistes
-     * @param cycliste auquel on compare la position
-     * @return
-     */
+
+
     public int compareTo(Cycliste cycliste) {
         return Integer.compare(this.positionActuelle, cycliste.positionActuelle);
     }

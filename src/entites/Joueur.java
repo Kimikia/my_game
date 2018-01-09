@@ -1,7 +1,5 @@
 package entites;
 
-import java.util.List;
-
 public class Joueur {
 
     private String nomJoueur;
@@ -58,12 +56,6 @@ public class Joueur {
      * @param cyclisteList
      * @param circuit
      */
-    public void avancer(List<Cycliste> cyclisteList, Circuit circuit) {
-        //avancer rouleur
-        rouleur.avancer(cyclisteList, circuit);
 
-        //avance sprinter
-        sprinter.avancer(cyclisteList, circuit);
-    }
 
 }
