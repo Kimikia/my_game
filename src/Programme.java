@@ -12,7 +12,9 @@ public class Programme {
 
     public static void main(String[] args) {
 
-        //creer 4 joueurs et les mettre dans une liste
+        /**
+         * demander à l'utilisateur d'enter le numero de joueurs souhiate puis creer ce nombre de joueurs
+         */
 
         System.out.println("Hello Les Cyclistes =) ! Préts pour une nouvelle course ??!!  Allez C'est partie!!! ");
         System.out.println("Commencer par : ");
@@ -78,7 +80,9 @@ public class Programme {
             joueurList.add(joueur4);
         }
 
-
+        /**
+         * demander à l'utlisateur de saisir le niveau de difficulte puis creer circuit selon ce niveau saisis
+         */
         System.out.println("Choisissez le niveau de difficulté du Circuit (entre 1 et 3 ):");
         System.out.println("1-Facile  ou 2-Moyen ou 3-Difficile");
 

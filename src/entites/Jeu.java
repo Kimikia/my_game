@@ -135,7 +135,7 @@ public class Jeu {
     private void avancerCyclistes() {
         System.out.println("==> avancerJoueurs");
         List<Cycliste> cyclisteList = listeCyclisteTrierParPosition();
-        for (int i = listeCyclisteTrierParPosition().size(); i>0; i--) {
+        for (int i = listeCyclisteTrierParPosition().size()-1; i>=0; i--) {
             Cycliste cycliste = listeCyclisteTrierParPosition().get(i);
             cycliste.avancer(cyclisteList,circuit);
 
