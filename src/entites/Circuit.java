@@ -15,7 +15,7 @@ public class Circuit {
 
     /**
      *
-     * @param nomCircuit attribué au circuit
+     * @param nomCircuit attribuee au circuit
      */
     public void setNomCircuit(String nomCircuit) {
         this.nomCircuit = nomCircuit;

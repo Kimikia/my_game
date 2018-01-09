@@ -9,7 +9,7 @@ import java.util.List;
 public class Utilitaires {
 
     /*
-    Le paquet de carte du rouleur est constitué de :
+    Le paquet de carte du rouleur est constitue de :
     3 cartes '3'
     3 cartes '4'
     3 cartes '5'
@@ -49,7 +49,7 @@ public class Utilitaires {
     }
 
     /**
-     * creation de paquet de carte pour le Sprinteur
+     * creation de paquet de carte pour le Sprinter
      * @return liste paquet de carte
      */
     public static List<Carte> creerPaquetSprinter() {
@@ -87,7 +87,7 @@ public class Utilitaires {
 
 
     /**
-     * creation de paquet de carte fatigue
+     * creation de paquet de carte fatigue ( qui peut etre utilisé pour les 2 tyes de cyclistes )
      * @return liste paquet de carte
      */
     public static List<CarteFatigue> creerPaquetFatigues() {
@@ -130,10 +130,9 @@ public class Utilitaires {
         return carteList;
     }
 
-    //on va creer 3 circuits , le joueur devrait choisr le circuit qu'il veut selon le degrée de difficulté
-
     /**
      * creation de circuit
+     *  3 circuits , le joueur devrait choisr le circuit qu'il veut selon le degree de difficulte
      * @return circuit
      */
     private static Circuit creerCircuitFacile() {
@@ -224,6 +223,12 @@ public class Utilitaires {
         return new Circuit(list, "Circuit Difficile");
 
     }
+
+    /**
+     * niveau du circuit choisis
+     * @param niveau entrer par l'utilisateur
+     * @return le circuit choisis
+     */
     public static Circuit circuitChoisis (int niveau){
         List<Tuile> list = new ArrayList<>();
         Circuit circuit= new Circuit(list , "nom Circuit") ;
@@ -233,12 +238,9 @@ public class Utilitaires {
         else if ( niveau==2){
           circuit=  creerCircuitMoyen();
         }
-
         else if ( niveau==3){
          circuit = creerCircuitDifficile();
-
         }
-
         return circuit;
 
     }
