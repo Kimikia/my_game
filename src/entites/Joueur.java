@@ -41,7 +41,7 @@ public class Joueur {
 
 
     /**
-     * permer de  Choisir carte pou le sprinter et le rouleur du joueur
+     * permer de  Choisir carte pour le sprinter et le rouleur du joueur
      */
     public void piocher() {
         //rouleur doit piocher
@@ -51,11 +51,6 @@ public class Joueur {
         sprinter.choisirCarte();
     }
 
-    /**
-     *
-     * @param cyclisteList
-     * @param circuit
-     */
 
 
 }

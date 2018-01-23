@@ -21,6 +21,10 @@ public class Circuit {
         this.nomCircuit = nomCircuit;
     }
 
+    public String getNomCircuit() {
+        return nomCircuit;
+    }
+
     /**
      * @param position position dans le circuit
      * @return la tuile correspendante
