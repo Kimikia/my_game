@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+
 public class Utilitaires {
 
     /*
@@ -20,6 +21,7 @@ public class Utilitaires {
 
     /**
      * creation de paquet de carte pour le rouleur
+     *
      * @return liste paquet de carte
      */
     public static List<Carte> creerPaquetsRouleur() {
@@ -50,11 +52,12 @@ public class Utilitaires {
 
     /**
      * creation de paquet de carte pour le Sprinter
+     *
      * @return liste paquet de carte
      */
     public static List<Carte> creerPaquetSprinter() {
     /*
-    Le paquet de carte du Sprinteur est constitué de :
+    Le paquet de carte du Sprinteur est constitue de :
     3 cartes '2'
     3 cartes '3'
     3 cartes '4'
@@ -87,44 +90,18 @@ public class Utilitaires {
 
 
     /**
-     * creation de paquet de carte fatigue ( qui peut etre utilisé pour les 2 tyes de cyclistes )
+     * creation de paquet de carte fatigue ( qui peut etre utilise pour les 2 tyes de cyclistes )
+     *
      * @return liste paquet de carte
      */
     public static List<CarteFatigue> creerPaquetFatigues() {
-        // le paquet de fatigue est constitué de 30 cartes Fatigue
+        // le paquet de fatigue est constitue de 30 cartes Fatigue
 
         List<CarteFatigue> carteList = new ArrayList<>();
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
-        carteList.add(new CarteFatigue());
+
+        for (int i = 0; i < 30; i++) {
+            carteList.add(new CarteFatigue());
+        }
 
 
         return carteList;
@@ -132,7 +109,8 @@ public class Utilitaires {
 
     /**
      * creation de circuit
-     *  3 circuits , le joueur devrait choisr le circuit qu'il veut selon le degree de difficulte
+     * 3 circuits , le joueur devrait choisr le circuit qu'il veut selon le degree de difficulte
+     *
      * @return circuit
      */
     private static Circuit creerCircuitFacile() {
@@ -161,16 +139,16 @@ public class Utilitaires {
         list.add(TuilesDefinies.arrive);
 
 
-
         return new Circuit(list, "Circuit Facile");
 
     }
 
     /**
      * creation de circuit niveau moyen
+     *
      * @return circuit moyen
      */
-    private static Circuit creerCircuitMoyen(){
+    private static Circuit creerCircuitMoyen() {
         List<Tuile> list = new ArrayList<>();
         list.add(TuilesDefinies.depart);
         list.add(TuilesDefinies.d);
@@ -197,7 +175,7 @@ public class Utilitaires {
 
     }
 
-    private static Circuit creerCircuitDifficile(){
+    private static Circuit creerCircuitDifficile() {
         List<Tuile> list = new ArrayList<>();
         list.add(TuilesDefinies.depart);
         list.add(TuilesDefinies.b);
@@ -226,22 +204,21 @@ public class Utilitaires {
 
     /**
      * niveau du circuit choisis
+     *
      * @param niveau entrer par l'utilisateur
      * @return le circuit choisis
      */
-    public static Circuit circuitChoisis (int niveau){
+    public static Circuit circuitChoisis(int niveau) {
         List<Tuile> list = new ArrayList<>();
-        Circuit circuit= new Circuit(list , "nom Circuit") ;
-        if ( niveau==1){
-           circuit=creerCircuitFacile();
-        }
-        else if ( niveau==2){
-          circuit=  creerCircuitMoyen();
-        }
-        else if ( niveau==3){
-         circuit = creerCircuitDifficile();
+        Circuit circuit = new Circuit(list, "nom Circuit");
+        if (niveau == 1) {
+            circuit = creerCircuitFacile();
+        } else if (niveau == 2) {
+            circuit = creerCircuitMoyen();
+        } else if (niveau == 3) {
+            circuit = creerCircuitDifficile();
         }
         return circuit;
 
     }
-    }
+}

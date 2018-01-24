@@ -17,7 +17,7 @@ public class Jeu {
 
     public Jeu(List<Joueur> listeJoueur, Circuit circuit) {
         if (listeJoueur.size() > 4 || listeJoueur.size() < 2) {
-            throw new IllegalArgumentException("Le nombre de joueurs doit étre compris entre 2 et 4");
+            throw new IllegalArgumentException("Le nombre de joueurs doit etre compris entre 2 et 4");
         } else {
             this.listeJoueur = listeJoueur;
         }
@@ -63,7 +63,7 @@ public class Jeu {
 
     /**
      * trier les cyclistes par rapport a leur position
-     * @return liste de cyclistes trier par rapport à leur position
+     * @return liste de cyclistes trier par rapport a leur position
      */
     private List<Cycliste> listeCyclisteTrierParPosition() {
         List<Cycliste> listCycliste = new ArrayList<>();
@@ -211,7 +211,7 @@ public class Jeu {
         System.out.println("============================  Phase Finale ============================");
         //checker si le jeu est fini >> afficher jeu fini
         if (estFini()) {
-            System.out.println("La partie est terminé");
+            System.out.println("La partie est termine");
             afficherPositionCyclistes();
 
         } else {
@@ -225,7 +225,7 @@ public class Jeu {
 
             //checker si le jeu est fini >> afficher jeu fini
             if (estFini()) {
-                System.out.println("La partie est terminé");
+                System.out.println("La partie est termine");
             } else {
                 passerPhaseSuivante();
             }

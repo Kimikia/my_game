@@ -10,7 +10,7 @@ public class TuileVirage extends Tuile {
         super(pen, Constants.NOMBRE_CASES_VIRAGE, lettre);
 
         if (lettre == 'a' || lettre == 'u') {
-            throw new IllegalArgumentException("les lettres 'a' et 'u' sont reservée pour la tuile depart et la tuile arrivé");
+            throw new IllegalArgumentException("les lettres 'a' et 'u' sont reservee pour la tuile depart et la tuile arrive");
         }
 
         this.estLeger = estLeger;
