@@ -213,6 +213,7 @@ public class Jeu {
         if (estFini()) {
             System.out.println("La partie est terminé");
             afficherPositionCyclistes();
+
         } else {
             //sinon changer la phase actuelle
             phaseDeJeu = Constants.PHASE_FINALE;

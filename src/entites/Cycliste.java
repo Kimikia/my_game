@@ -11,7 +11,7 @@ public abstract class Cycliste implements Comparable<Cycliste> {
     private List<Carte> listeCartesDefaucees;
     private Carte carteChoisie;
     private int positionActuelle;
-    private boolean fileDroite;
+
 
     public Cycliste(List<Carte> listeCartes) {
         this.listeCartesFaceCache = listeCartes;
