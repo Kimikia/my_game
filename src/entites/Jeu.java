@@ -46,7 +46,7 @@ public class Jeu {
      * verifier si le jeu est fini ou pas
      * @return vrai so le jeu est fini
      */
-    private boolean estFini() {
+    public boolean estFini() {
         int dernierePosition = circuit.positionDerniereCase();
         for (int i = 0; i < listeJoueur.size(); i++) {
             Joueur joueur = listeJoueur.get(i);
