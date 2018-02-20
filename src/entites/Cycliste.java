@@ -11,39 +11,43 @@ public abstract class Cycliste implements Comparable<Cycliste> {
     private List<Carte> listeCartesDefaucees;
     private Carte carteChoisie;
     private int positionActuelle;
-    private boolean fileDroite;
+
 
     public Cycliste(List<Carte> listeCartes) {
         this.listeCartesFaceCache = listeCartes;
         this.listeCartesDefaucees = new ArrayList<>();
     }
 
+    /**
+     *
+     * METHODES GETTERS
+     */
     public int getPositionActuelle() {
         return positionActuelle;
     }
-
-    public void setPositionActuelle(int positionActuelle) {
-        this.positionActuelle = positionActuelle;
-    }
-
     public List<Carte> getListeCartesFaceCache() {
         return listeCartesFaceCache;
     }
-
-    public void setListeCartesFaceCache(List<Carte> listeCartesFaceCache) {
-        this.listeCartesFaceCache = listeCartesFaceCache;
-    }
-
     public List<Carte> getListeCartesDefaucees() {
         return listeCartesDefaucees;
     }
 
+    /**
+     *
+     * methodes setters
+     */
+    public void setPositionActuelle(int positionActuelle) {
+        this.positionActuelle = positionActuelle;
+    }
+    public void setListeCartesFaceCache(List<Carte> listeCartesFaceCache) {
+        this.listeCartesFaceCache = listeCartesFaceCache;
+    }
     public void setListeCartesDefaucees(List<Carte> listeCartesDefaucees) {
         this.listeCartesDefaucees = listeCartesDefaucees;
     }
 
     /**
-     * verifie si on a des carte face caché sinon melanger la defausse
+     * verifiee si on a des carte face cachee sinon melanger la defausse
      *
      * @return les 4 les 4 premiere cartes
      */
@@ -66,16 +70,18 @@ public abstract class Cycliste implements Comparable<Cycliste> {
             list.addAll(listeCartesFaceCache);
         }
 
-        //supprimer les 4 cartes piochées de la liste a piocher
+        //supprimer les 4 cartes piochees de la liste a piocher
         listeCartesFaceCache.removeAll(list);
 
-        //ajouter les 4 cartes piochées dans la liste des cartes a retourner
+        //ajouter les 4 cartes piochees dans la liste des cartes a retourner
         listeCartesDefaucees.addAll(list);
 
         return list;
     }
 
-
+    /**
+     * choisir carte depuis les 4 cartes piochee
+     */
     public void choisirCarte() {
         System.out.println(" Choisir la carte pour le " + getTypeCycliste());
         List<Carte> carteList = piocher4Cartes();
@@ -115,20 +121,31 @@ public abstract class Cycliste implements Comparable<Cycliste> {
      */
     public void avancer(List<Cycliste> cyclisteList, Circuit circuit) {
         int nouvellePositionTuile = calculerNouvellePositionParRapportaLaTuile(circuit);
-        int nouvellePositionCycliste = calculerNouvellePositionParRapportAuCyclistes(nouvellePositionTuile, cyclisteList);
-        this.positionActuelle = nouvellePositionCycliste;
+        int nouvellePositionCyclistee = calculerNouvellePositionParRapportAuCyclistes(nouvellePositionTuile, cyclisteList);
+        this.positionActuelle = nouvellePositionCyclistee;
     }
 
+
+    /**
+     * ajouter une carte fatigue dans liste retournee
+     * @param carteFatigue dont le numero est 2
+     */
     public void appliquerFatigue(CarteFatigue carteFatigue) {
-        //ajouter une carte fatigue dans liste retournée
+
         listeCartesDefaucees.add(carteFatigue);
     }
 
+    /**
+     * avancer d'une case si aspiration
+     */
     public void appliquerAspiration() {
-        //avancer d'une case si aspiration
+
         this.positionActuelle++;
     }
 
+    /**
+     *  melanger les cartes face cachee
+     */
     private void melangerLaDefauce() {
         System.out.println("entrain de melanger la defauce");
         //  ajouter les cartes defausse dans les cartes facecache
@@ -141,18 +158,17 @@ public abstract class Cycliste implements Comparable<Cycliste> {
         Collections.shuffle(listeCartesFaceCache);
     }
 
-    public boolean estSurFileDroite() {
-        return fileDroite;
-    }
 
-    public boolean estSurFileGauche() {
-        return !fileDroite;
-    }
 
     public int compareTo(Cycliste cycliste) {
         return Integer.compare(this.positionActuelle, cycliste.positionActuelle);
     }
 
+    /**
+     * calculer la nouvelle position par rapport  a La Tuile
+     * @param circuit choisis par le joueuer
+     * @return la nouvelle position
+     */
     private int calculerNouvellePositionParRapportaLaTuile(Circuit circuit) {
         int nouvellePosition = positionActuelle + carteChoisie.numero;
 
@@ -182,6 +198,12 @@ public abstract class Cycliste implements Comparable<Cycliste> {
         return nouvellePosition;
     }
 
+    /**
+     * determiner si une position ets libe
+     * @param position a verifier
+     * @param cyclisteList cycliste qui peut l'occupe
+     * @return boolean vrai si elle est libre
+     */
     private boolean estLibre(int position, List<Cycliste> cyclisteList) {
         for (Cycliste c : cyclisteList) {
             if (position == c.getPositionActuelle()) {
@@ -191,6 +213,9 @@ public abstract class Cycliste implements Comparable<Cycliste> {
         return true;
     }
 
-
+    /**
+     *
+     * @return la classe du cycliste
+     */
     protected abstract String getTypeCycliste();
 }

@@ -17,7 +17,7 @@ public class Jeu {
 
     public Jeu(List<Joueur> listeJoueur, Circuit circuit) {
         if (listeJoueur.size() > 4 || listeJoueur.size() < 2) {
-            throw new IllegalArgumentException("Le nombre de joueurs doit étre compris entre 2 et 4");
+            throw new IllegalArgumentException("Le nombre de joueurs doit etre compris entre 2 et 4");
         } else {
             this.listeJoueur = listeJoueur;
         }
@@ -27,17 +27,33 @@ public class Jeu {
         this.phaseDeJeu = Constants.PHASE_D_ENERGIE;
     }
 
+
+    /**
+     * demarrer le jeu
+     */
     public void demarrerJeu() {
+        positionDepart ();
         debutPhaseEnergie();
     }
 
-    private boolean estFini() {
+    public void positionDepart (){
+        for (int i =0 ; i<listeJoueur.size();i++){
+            listeJoueur.get(i).getRouleur().setPositionActuelle(i+1);
+            listeJoueur.get(i).getSprinter().setPositionActuelle(listeJoueur.size()-i);
+        }
+        }
+    /**
+     * verifier si le jeu est fini ou pas
+     * @return vrai so le jeu est fini
+     */
+    public boolean estFini() {
         int dernierePosition = circuit.positionDerniereCase();
         for (int i = 0; i < listeJoueur.size(); i++) {
             Joueur joueur = listeJoueur.get(i);
             int positionSprinteur = joueur.getSprinter().getPositionActuelle();
             int positionRouleur = joueur.getRouleur().getPositionActuelle();
             if (positionSprinteur >= dernierePosition || positionRouleur >= dernierePosition) {
+                System.out.println("Find de jeu ");
                 return true;
             }
         }
@@ -45,6 +61,10 @@ public class Jeu {
         return false;
     }
 
+    /**
+     * trier les cyclistes par rapport a leur position
+     * @return liste de cyclistes trier par rapport a leur position
+     */
     private List<Cycliste> listeCyclisteTrierParPosition() {
         List<Cycliste> listCycliste = new ArrayList<>();
 
@@ -53,22 +73,29 @@ public class Jeu {
             listCycliste.add(listeJoueur.get(i).getSprinter());
         }
 
-        //croissant ( du plus petit au plus grand )
+        //croissant
         Collections.sort(listCycliste);
 
         return listCycliste;
     }
 
-    private Cycliste retourneJoueurEnTete() {
+    /**
+     * retourner le cycliste du joueur en tete
+     * @return cycliste en tete
+     */
+    private Cycliste retourneCyclisteEnTete() {
         List<Cycliste> listeCyclistesTrier = listeCyclisteTrierParPosition();
         Cycliste enTete = listeCyclistesTrier.get(listeCyclistesTrier.size() - 1);
         return enTete;
     }
 
+    /**
+     * appliquer la fatigue sur le cycliste  en tete
+     */
     private void appliquerFatigue() {
-        System.out.println("==> appliquer fatigue sur le cycliste en tete");
+        System.out.println("==> appliquer fatigue sur le cycliste en tete  ");
 
-        Cycliste cycliste = retourneJoueurEnTete();
+        Cycliste cycliste = retourneCyclisteEnTete();
 
         CarteFatigue carteFatigue;
         //piocher une carte
@@ -83,8 +110,11 @@ public class Jeu {
         cycliste.appliquerFatigue(carteFatigue);
     }
 
+    /**
+     * appliquer l aspiration sur le cycliste placer a moins d une case de l autre cycliste
+     */
     private void appliquerAspiration() {
-        System.out.println("==> appliquer aspiration");
+
 
         List<Cycliste> listeCyclistesTrier = listeCyclisteTrierParPosition();
         //parcours tableau jusqu'a l'avant dernier element
@@ -93,19 +123,29 @@ public class Jeu {
             int pos2 = listeCyclistesTrier.get(i + 1).getPositionActuelle();
             if (pos2 - pos1 == 2) {
                 listeCyclistesTrier.get(i).appliquerAspiration();
+                System.out.println("==> appliquer aspiration");
             }
         }
+
     }
 
-    private void avancerJoueurs() {
+    /**
+     * avancer les cyclistes
+     */
+    private void avancerCyclistes() {
         System.out.println("==> avancerJoueurs");
         List<Cycliste> cyclisteList = listeCyclisteTrierParPosition();
-        for (int i = 0; i < listeJoueur.size(); i++) {
-            Joueur joueur = listeJoueur.get(i);
-            joueur.avancer(cyclisteList, circuit);
+        for (int i = listeCyclisteTrierParPosition().size()-1; i>=0; i--) {
+            Cycliste cycliste = listeCyclisteTrierParPosition().get(i);
+            cycliste.avancer(cyclisteList,circuit);
+
+
         }
     }
 
+    /**
+     * piocher les cartes par le joueur
+     */
     private void piocherCartes() {
         //chaque joueur doit piocher
         for (int i = 0; i < listeJoueur.size(); i++) {
@@ -115,6 +155,9 @@ public class Jeu {
         }
     }
 
+    /**
+     * permet de passr a la phase suivante
+     */
     private void passerPhaseSuivante() {
         switch (phaseDeJeu) {
             case Constants.PHASE_D_ENERGIE:
@@ -131,8 +174,11 @@ public class Jeu {
         }
     }
 
+    /**
+     * commencer la phase energie
+     */
     private void debutPhaseEnergie() {
-        System.out.println("============================ Debut Phase Energie ============================");
+        System.out.println("============================ Phase Energie ============================");
         // changer la phase actuelle
         phaseDeJeu = Constants.PHASE_D_ENERGIE;
 
@@ -143,24 +189,31 @@ public class Jeu {
         passerPhaseSuivante();
     }
 
+    /***
+     * commencer la phase mouvement
+     */
     private void debutPhaseMouvement() {
-        System.out.println("============================ Debut Phase Mouvement ============================");
+        System.out.println("============================ Phase Mouvement ============================");
         // changer la phase actuelle
         phaseDeJeu = Constants.PHASE_DE_MOUVEMENT;
 
         // appeler les methodes de cette phase
-        avancerJoueurs();
+        avancerCyclistes();
 
         //passer a la phase suivante
         passerPhaseSuivante();
     }
 
+    /**
+     * commencer la phase finale
+     */
     private void debutPhaseFinale() {
-        System.out.println("============================ Debut Phase Finale ============================");
+        System.out.println("============================  Phase Finale ============================");
         //checker si le jeu est fini >> afficher jeu fini
         if (estFini()) {
-            System.out.println("La partie est terminé");
+            System.out.println("La partie est termine");
             afficherPositionCyclistes();
+
         } else {
             //sinon changer la phase actuelle
             phaseDeJeu = Constants.PHASE_FINALE;
@@ -172,7 +225,7 @@ public class Jeu {
 
             //checker si le jeu est fini >> afficher jeu fini
             if (estFini()) {
-                System.out.println("La partie est terminé");
+                System.out.println("La partie est termine");
             } else {
                 passerPhaseSuivante();
             }
@@ -182,6 +235,9 @@ public class Jeu {
 
     }
 
+    /**
+     * afficher la position du cycliste
+     */
     private void afficherPositionCyclistes() {
         //print la position de chaque cycliste
         /* SOUS LA FORME
@@ -194,6 +250,7 @@ public class Jeu {
             System.out.println("La position du Rouleur du joueur " + joueur.getNomJoueur() + " est " + joueur.getRouleur().getPositionActuelle());
         }
     }
+
 
     /*
     METHODES Getters

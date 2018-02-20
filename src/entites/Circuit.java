@@ -13,20 +13,16 @@ public class Circuit {
         this.nomCircuit = nomCircuit;
     }
 
-    public List<Tuile> getListTuiles() {
-        return listTuiles;
-    }
-
-    public void setListTuiles(List<Tuile> listTuiles) {
-        this.listTuiles = listTuiles;
+    /**
+     *
+     * @param nomCircuit attribuee au circuit
+     */
+    public void setNomCircuit(String nomCircuit) {
+        this.nomCircuit = nomCircuit;
     }
 
     public String getNomCircuit() {
         return nomCircuit;
-    }
-
-    public void setNomCircuit(String nomCircuit) {
-        this.nomCircuit = nomCircuit;
     }
 
     /**
@@ -41,20 +37,6 @@ public class Circuit {
             return listTuiles.get(0);
         } else {
             int sommeNombreDecaseTuile = 0;
-                /* 2eme methode
-                  Tuile t = null;
-            for (Tuile tuile : listTuiles) {
-                int nbTuile = tuile.nombreDeCases;
-                sommeNombreDecaseTuile += nbTuile;
-                if (sommeNombreDecaseTuile >= position) {
-                    t = tuile;
-                    break;
-                }
-            }
-
-            return t;
-            */
-
             int i = 0;
             while (sommeNombreDecaseTuile < position) {
                 int nbTuile = listTuiles.get(i).nombreDeCases;
@@ -65,21 +47,40 @@ public class Circuit {
         }
     }
 
+    /**
+     * determiner si la position est dans une monte
+     * @param position  a verifier
+     * @return boolean si la position est en montee ou pas
+     */
     public boolean positionEnMontee(int position) {
         Tuile tuile = tuileAlaPosition(position);
         return tuile.estMontee();
     }
 
+    /**
+     *  determine si la position est dans une descente
+     * @param position a verifier
+     * @return boolean si la position est en montee ou pas
+     */
     public boolean positionEnDescente(int position) {
         Tuile tuile = tuileAlaPosition(position);
         return tuile.estDescente();
     }
 
+    /**
+     * determine si la position est en voie normale
+     * @param position a verifier
+     * @return boolean si la position est en ligne droite
+     */
     public boolean positionEnVoieNormale(int position) {
         Tuile tuile = tuileAlaPosition(position);
         return tuile.estLigneDroite();
     }
 
+    /**
+     *
+     * @return la position de la dernier case
+     */
     public int positionDerniereCase() {
         int somme = 0;
         for (int i = 0; i < listTuiles.size(); i++) {

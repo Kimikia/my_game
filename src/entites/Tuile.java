@@ -11,7 +11,7 @@ public abstract class Tuile {
     /**
      * @param pen      la pente de la tuile , 1 s'il s'agit d'une montagne , -1 s'il s'agit d'une descente ou 0 ligne droite
      * @param nbrCases le nombre de case de la entites.Tuile
-     * @param lettre   les lettres attribué à chaque tuile de a à z
+     * @param lettre   les lettres attribue a chaque tuile de a a z
      */
     protected Tuile(int pen, int nbrCases, char lettre) {
         this.pente = pen;

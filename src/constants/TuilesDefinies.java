@@ -4,8 +4,11 @@ import entites.Tuile;
 import entites.TuileLigneDroite;
 import entites.TuileVirage;
 
+/**
+ * les tuiles definies 
+ */
 public class TuilesDefinies {
-    // les pentes sont tous à 0
+
     public static final Tuile depart = new TuileLigneDroite(Constants.TUILE_NORMALE, Constants.NOMBRE_CASES_LIGNE_DROITE, 'a');
     public static final Tuile b = new TuileLigneDroite(Constants.TUILE_MONTAGNE, Constants.NOMBRE_CASES_LIGNE_DROITE, 'b');
     public static final Tuile c = new TuileLigneDroite(Constants.TUILE_NORMALE, Constants.NOMBRE_CASES_LIGNE_DROITE, 'c');
